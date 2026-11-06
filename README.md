@@ -59,8 +59,7 @@ Our architecture maps these hardware primitives directly onto software developme
             │    LOCAL BARE-METAL INTERCONNECT    │
             │  (Stitches & Compiles on Hardware)  │
             └─────────────────────────────────────┘
-
-
+            
 ### 2.1 The Architectural Mapping Matrix
 
 | **Hardware FPGA Primitive** | **Software AI Architecture Equivalent** | **Functional Security Role** |
