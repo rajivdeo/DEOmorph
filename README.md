@@ -47,6 +47,7 @@ Our architecture maps these hardware primitives directly onto software developme
           ┌────────────────────┼────────────────────┐
           │ Fragment A         │ Fragment B         │ Fragment C
           ▼                    ▼                    ▼
+```text
   ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
   │  Cloud LLM   │     │  Cloud LLM   │     │  Cloud LLM   │
   │ (Untrusted)  │     │ (Untrusted)  │     │ (Untrusted)  │
@@ -59,7 +60,7 @@ Our architecture maps these hardware primitives directly onto software developme
             │    LOCAL BARE-METAL INTERCONNECT    │
             │  (Stitches & Compiles on Hardware)  │
             └─────────────────────────────────────┘
-
+```
             
 ### 2.1 The Architectural Mapping Matrix
 
