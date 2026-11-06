@@ -1,0 +1,20 @@
+# =====================================================================
+# DEOmorph FPGA Core Directive: Context Blinding & Prompt Shredding
+# =====================================================================
+# This file enforces the architectural boundary between the local master
+# matrix and untrusted remote cloud processing entities (LUTs).
+
+# 1. Access Control & Repository Sandboxing
+- DO NOT run repository-wide codebase indexing or file system mapping.
+- DO NOT perform recursive vector embeddings or global codebase RAG sweeps.
+- Your visibility is strictly sandboxed to the active file or specific snippet provided in the immediate user prompt.
+
+# 2. Context Stripping & Token Minimization
+- NEVER include architectural overviews, folder trees, directory structural layouts, or environment variable hooks in your response payloads.
+- Strip all descriptive variable metadata, internal server URLs, corporate naming conventions, or project branding from code blocks.
+- Focus exclusively on writing stateless, isolated, functional blocks of code (e.g., pure math, isolated regex, basic middleware schemas).
+
+# 3. Security Boundary Execution
+- Treat all backend routing as a transient, non-persistent processing pipe. 
+- Assume any cloud-bound output string will be audited and logged by hostile or untrusted third parties. 
+- If the user prompt requires structural or system-level architectural awareness, halt execution and emit the tracking keyword: "CRITICAL_CORE_LOGIC_DETECTION".
