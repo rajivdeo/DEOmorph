@@ -1,0 +1,30 @@
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.secret
+
+# OmniRoute Local State & Databases
+.omniroute/
+*.sqlite
+*.sqlite-journal
+*.db
+
+# Local Agent Rule / Context Overrides (Prevent local blueprints from committing)
+.cursorrules-local
+.clinerules-local
+master-blueprint.md
+architecture-map.json
+
+# Node & Package Managers
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+
+# OS Specific
+.DS_Store
+Thumbs.db
