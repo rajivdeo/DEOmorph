@@ -35,30 +35,31 @@ A physical FPGA achieves computational flexibility by distributing digital logic
 
 Our architecture maps these hardware primitives directly onto software development layers:
 
-[ PROPRIETARY IDE CONTEXT ]
-(Kilo Code / VS Code Layer)
-│
-▼
-┌──────────────────────────────────────┐
-│     LOCAL MASTER ROUTING MATRIX      │
-│  (Performs Context Blinding / .rule)│
-└──────────────────┬───────────────────┘
-│
-┌────────────────────┼────────────────────┐
-│ Fragment A         │ Fragment B         │ Fragment C
-▼                    ▼                    ▼
-┌──────────────┐     ┌──────────────┐     ┌──────────────┐
-│  Cloud LLM   │     │  Cloud LLM   │     │  Cloud LLM   │
-│ (Untrusted)  │     │ (Untrusted)  │     │ (Untrusted)  │
-│ [LUT Gen 1]  │     │ [LUT Gen 2]  │     │ [LUT Gen 3]  │
-└──────┬───────┘     └──────┬───────┘     └──────┬───────┘
-│                    │                    │
-└────────────────────┼────────────────────┘
-▼ (Raw Code Output)
-┌──────────────────────────────────────┐
-│     LOCAL BARE-METAL INTERCONNECT    │
-│   (Stitches & Compiles on Hardware)  │
-└──────────────────────────────────────┘
+                  [ PROPRIETARY IDE CONTEXT ]
+                  (Kilo Code / VS Code Layer)
+                               │
+                               ▼
+            ┌─────────────────────────────────────┐
+            │     LOCAL MASTER ROUTING MATRIX     │
+            │ (Performs Context Blinding / .rule) │
+            └──────────────────┬──────────────────┘
+                               │
+          ┌────────────────────┼────────────────────┐
+          │ Fragment A         │ Fragment B         │ Fragment C
+          ▼                    ▼                    ▼
+  ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+  │  Cloud LLM   │     │  Cloud LLM   │     │  Cloud LLM   │
+  │ (Untrusted)  │     │ (Untrusted)  │     │ (Untrusted)  │
+  │ [LUT Gen 1]  │     │ [LUT Gen 2]  │     │ [LUT Gen 3]  │
+  └──────┬───────┘     └──────┬───────┘     └──────┬───────┘
+         │                    │                    │
+         └────────────────────┼────────────────────┘
+                              ▼ (Raw Code Output)
+            ┌─────────────────────────────────────┐
+            │    LOCAL BARE-METAL INTERCONNECT    │
+            │  (Stitches & Compiles on Hardware)  │
+            └─────────────────────────────────────┘
+
 
 ### 2.1 The Architectural Mapping Matrix
 
