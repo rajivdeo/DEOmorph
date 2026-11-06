@@ -1,7 +1,7 @@
 # DEOmorph
 # DEOmorph FPGA: Software-Defined FPGA Architecture for Zero-Trust AI Development
 
-[![License: MIT](https://shields.io)](https://opensource.org)
+[![License: Apache 2.0](https://shields.io)](https://opensource.org)
 [![Security: Zero-Trust](https://shields.io)]()
 [![Compliance: ISO27001 / SOC2 / GDPR](https://shields.io)]()
 
